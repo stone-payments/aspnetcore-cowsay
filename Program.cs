@@ -23,6 +23,7 @@ namespace AspnetCoreCowsay
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost")
                 .Build();
 
             host.Run();
