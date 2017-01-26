@@ -28,9 +28,15 @@ namespace AspnetCoreCowsay
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
+            app.UseStaticFiles();
+
+            app.Use((context,next)=>{
+
+                if(context.Request.Path.Value == "/"){
+                    string cow = Cowsay.GetCowsay("Mooo!",AnimalMode.Paranoid);
+                    return context.Response.WriteAsync(cow);
+                }
+                return next();
             });
         }
     }
