@@ -30,10 +30,11 @@ namespace AspnetCoreCowsay
 
             app.UseStaticFiles();
 
+            var cowsayMessage = Environment.GetEnvironmentVariable("COWSAY_MESSAGE");
             app.Use((context,next)=>{
 
                 if(context.Request.Path.Value == "/"){
-                    string cow = Cowsay.GetCowsay("DeployFromGoCD!",AnimalMode.Paranoid);
+                    string cow = Cowsay.GetCowsay(cowsayMessage, AnimalMode.Paranoid);
                     return context.Response.WriteAsync(cow.ToString());
                 }
                 return next();
