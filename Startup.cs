@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
+using System.Text;
+using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,8 +33,8 @@ namespace AspnetCoreCowsay
             app.Use((context,next)=>{
 
                 if(context.Request.Path.Value == "/"){
-                    string cow = Cowsay.GetCowsay("Mooo!",AnimalMode.Paranoid);
-                    return context.Response.WriteAsync(cow);
+                    string cow = Cowsay.GetCowsay("DeployFromGoCD!",AnimalMode.Paranoid);
+                    return context.Response.WriteAsync(cow.ToString());
                 }
                 return next();
             });
