@@ -1,0 +1,8 @@
+Subject: 'Test change request (tsuru deploy)'
+Description: 'Testing tsuru deploy via GoCD'
+RequesterEmail: 'cnatan@stone.com.br'
+Impact: 'Low'
+Risk: 'Low'
+Priority: 'Low'
+ChangeType: 'Standard'
+GroupId: 4000269484
