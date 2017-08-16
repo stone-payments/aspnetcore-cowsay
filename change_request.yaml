@@ -1,6 +1,7 @@
 Subject: 'Test change request (tsuru deploy)'
 Description: 'Testing tsuru deploy via GoCD'
 RequesterEmail: 'cnatan@stone.com.br'
+Priority: 'Low'
 ChangeType: 'Standard'
 CustomFields:
   WasFunctionalTestExecuted: true
@@ -10,6 +11,8 @@ CustomFields:
   ChangeValidatorDepartment: 'QaaS'
   SystemName: Cowsay
   ChangeReason: Feature
+  DeployPlan: GoCD automatic deploy
+  RollbackPlan: GoCD automatic rollback
   EmergencialChange: false
   CanAffectCriticalSystems: false
   WillAffectExternalCustomers: false
