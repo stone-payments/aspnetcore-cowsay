@@ -30,7 +30,8 @@ namespace AspnetCoreCowsay
 
             app.UseStaticFiles();
 
-            var cowsayMessage = Environment.GetEnvironmentVariable("COWSAY_MESSAGE");
+            //var cowsayMessage = Environment.GetEnvironmentVariable("COWSAY_MESSAGE");
+            var cowsayMessage = "Palmeiras não tem mundial.";
             app.Use((context,next)=>{
 
                 if(context.Request.Path.Value == "/"){
