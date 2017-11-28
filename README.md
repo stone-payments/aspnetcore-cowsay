@@ -1,8 +1,9 @@
 # AspnetCore Cowsay
 
-Sample application to run aspnetcore in tsuru paas. Application has no pratical pourpose.
+Sample application to run aspnetcore in tsuru paas. Application has no pratical purpose.
 
 Pre-Deploy
+
 Create an app using the dotnet-core platform.
 
 Deploying
